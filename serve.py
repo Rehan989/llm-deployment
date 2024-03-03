@@ -21,9 +21,9 @@ class Query(BaseModel):
     question: str
     
     
-@app.get("/")
-async def redirect_root_to_docs():
-    return RedirectResponse("/docs")
+# @app.get("/")
+# async def redirect_root_to_docs():
+#     return RedirectResponse("/docs")
 
 
 add_routes(app, pgchain, path="/pipeline")
