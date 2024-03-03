@@ -1,0 +1,14 @@
+version: '3'
+services:
+  ollama:
+    image: ollama/ollama 
+    ports:
+      - "11433:11433"
+  qdrant:
+    image: qdrant/qdrant
+    ports:
+      - "6333:6333"
+  fastapi_app:  
+    build: .
+    ports:
+      - "8000:8000"  # Expose FastAPI's default port
