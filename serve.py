@@ -4,7 +4,6 @@ from fastapi.responses import RedirectResponse
 from main import answer_question  # Import from your main.py
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from langserve import add_routes
 from main import chain as pgchain
 warnings.simplefilter("ignore")
 app = FastAPI()  
@@ -21,12 +20,13 @@ class Query(BaseModel):
     question: str
     
     
-# @app.get("/")
-# async def redirect_root_to_docs():
-#     return RedirectResponse("/docs")
+@app.get("/")
+async def redirect_root_to_docs():
+    return RedirectResponse("/docs")
 
 
-add_routes(app, pgchain, path="/pipeline")
+# add_routes(app, pgchain, path="/pipeline")
+@app.post("/pipeline")
 async def ask_question(data: Query):
     answer, source_docs = answer_question(data.question)
 
