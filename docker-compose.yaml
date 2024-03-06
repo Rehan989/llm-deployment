@@ -3,7 +3,7 @@ services:
   ollama:
     image: ollama/ollama 
     ports:
-      - "11433:11433"
+      - "11434:11434"
   qdrant:
     image: qdrant/qdrant
     ports:
