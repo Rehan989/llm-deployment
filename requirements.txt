@@ -1,7 +1,10 @@
-chainlit
 langchain
-langchain_community
+langchain-community
 PyPDF2
 pypdf
 chromadb
 langchainhub
+qdrant-client
+ollama
+uvicorn
+pydantic==1.10
