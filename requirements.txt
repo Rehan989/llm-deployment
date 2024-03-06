@@ -8,3 +8,4 @@ qdrant-client
 ollama
 uvicorn
 pydantic==1.10
+fastapi
