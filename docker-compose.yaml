@@ -1,9 +1,9 @@
 version: '3'
 services:
-  # ollama:
-  #   image: ollama/ollama
-  #   ports:
-  #     - "11434:11434"
+  ollama:
+    image: ollama/ollama
+    ports:
+      - "11434:11434"
   qdrant:
     image: qdrant/qdrant
     ports:

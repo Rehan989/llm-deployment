@@ -4,7 +4,7 @@ PyPDF2
 pypdf
 chromadb
 langchainhub
-qdrant-client
+qdrant-client==1.8
 ollama
 uvicorn
 pydantic==1.10
